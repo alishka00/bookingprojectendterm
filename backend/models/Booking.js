@@ -25,7 +25,6 @@ const bookingSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// Index for performance (important for grading)
 bookingSchema.index({ user: 1, date: 1 });
 
 module.exports = mongoose.model("Booking", bookingSchema);

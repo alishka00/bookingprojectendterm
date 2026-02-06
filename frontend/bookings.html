@@ -5,10 +5,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
+<div class="sidebar" id="sidebar">
+  <a href="index.html">Login</a>
+  <a href="register.html">Register</a>
+  <a href="services.html">Services</a>
+  <a href="add-service.html">Add Service</a>
+  <a href="bookings.html">Bookings</a>
+  <a href="add-booking.html">Add Booking</a>
+  <a href="profile.html">Profile</a>
+</div>
+
+<div class="main" id="mainContent">
   <h2>Bookings</h2>
 
   <ul id="bookings"></ul>
-
+</div>
   <script src="app.js"></script>
   <script>loadBookings();</script>
 </body>

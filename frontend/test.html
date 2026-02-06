@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="toggleSidebar()">Toggle</button>
+
+<div id="sidebar" style="width:200px;height:100vh;background:black;position:fixed;left:0;"></div>
+<div id="mainContent" style="margin-left:220px;">CONTENT</div>
+
+<script>
+function toggleSidebar() {
+  document.getElementById("sidebar").classList.toggle("hidden");
+}
+</script>
+
+<style>
+.hidden { left:-200px !important; }
+</style>
+
+</body>
+</html>

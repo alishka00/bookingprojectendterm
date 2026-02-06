@@ -97,3 +97,33 @@ async function loadProfile() {
   document.getElementById("profile").innerText =
     JSON.stringify(await res.json(), null, 2);
 }
+
+async function register() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const res = await fetch(`${API}/auth/register`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, password })
+  });
+
+  const data = await res.json();
+
+  document.getElementById("msg").innerText = data.message || "Registered!";
+}
+
+function logout() {
+  localStorage.removeItem("token");
+  alert("Logged out");
+  window.location.href = "index.html";
+}
+
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const main = document.getElementById("mainContent");
+
+  sidebar.classList.toggle("hidden");
+  main.classList.toggle("full");
+}

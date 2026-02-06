@@ -40,3 +40,51 @@ a {
   display: inline-block;
   margin-top: 20px;
 }
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: #222;
+  padding-top: 60px;
+  transition: 0.3s;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: #444;
+}
+
+.sidebar.hidden {
+  left: -220px;
+}
+
+.main {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+.main.full {
+  margin-left: 20px;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}

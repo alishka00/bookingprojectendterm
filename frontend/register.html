@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+  <title>Register</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
-<div class="sidebar" id="sidebar">
+  <div class="sidebar" id="sidebar">
   <a href="index.html">Login</a>
   <a href="register.html">Register</a>
   <a href="services.html">Services</a>
@@ -17,18 +17,20 @@
 </div>
 
 <div class="main" id="mainContent">
-  <h2>Login</h2>
+  <div class="container">
+    <h2>Register</h2>
 
-  <input id="email" placeholder="Email" />
-  <input id="password" type="password" placeholder="Password" />
-  <button onclick="login()">Login</button>
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
 
-  <a href="register.html">Create new account</a>
+    <button onclick="register()">Register</button>
 
+    <p id="msg"></p>
 
-  <p id="error"></p>
+    <a href="index.html">Go to login</a>
   </div>
+</div>
   <script src="app.js"></script>
-  
 </body>
 </html>
